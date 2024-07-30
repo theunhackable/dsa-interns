@@ -8,11 +8,12 @@ class Stack:
   def __init__(self, top=None):
     self.top = top
   def push(self, val):
-    #add element to the top
-    pass
+    new_node = Node(val)
+    new_node.next = self.top
+    self.top = new_node
+    
   def pop(self):
-    # remove top element
-    pass
+    self.top = self.top.next
+    
   def peek(self):
-    #return the top element
-    pass
+    return self.top.val
