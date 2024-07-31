@@ -7,13 +7,6 @@ struct Node {
 
 struct Node *top = NULL;
 
-void push(int value) {
-    struct Node *newNode;
-    newNode = (struct Node*)malloc(sizeof(struct Node));
-    newNode->data = value;
-    newNode->next = top;
-    top = newNode;
-}
 
 void display() {
     struct Node *current;
@@ -26,6 +19,13 @@ void display() {
             current = current->next;
         }
     }
+}
+void push(int value) {
+    struct Node *newNode;
+    newNode = (struct Node*)malloc(sizeof(struct Node));
+    newNode->data = value;
+    newNode->next = top;
+    top = newNode;
 }
 
 void peek() {
@@ -49,9 +49,11 @@ void pop() {
 }
 
 int main() {
-    push(10);
-    push(20);
-    push(30);
+    push(11);
+    push(13);
+    push(14);
+    push(15);
+    push(18);
     display();
     peek();
     pop();
