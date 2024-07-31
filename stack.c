@@ -29,28 +29,12 @@ void push(int value) {
 }
 
 
-
-void pop() {
-    struct Node *temp;
-    temp = top;
-    if (top == NULL) {
-        printf("Stack is empty\n");
-    } else {
-        printf("The popped element is %d\n", top->data);
-        top = top->next; 
-        free(temp);
-    }
-}
-
 int main() {
     push(11);
     push(13);
     push(14);
     push(15);
     push(18);
-    display();
-    peek();
-    pop();
     display();
     return 0;
 }
