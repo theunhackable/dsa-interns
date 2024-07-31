@@ -28,13 +28,7 @@ void push(int value) {
     top = newNode;
 }
 
-void peek() {
-    if (top == NULL) {
-        printf("Stack is Empty\n");
-    } else {
-        printf("Top element is %d\n", top->data);
-    }
-}
+
 
 void pop() {
     struct Node *temp;
@@ -58,6 +52,5 @@ int main() {
     peek();
     pop();
     display();
-    peek();
     return 0;
 }
