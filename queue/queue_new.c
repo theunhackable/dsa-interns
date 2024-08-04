@@ -70,7 +70,7 @@ int main() {
 
     printf("%d\n", empty(q));
 
-    free(q->arr); // Manually free the allocated memory
-    free(q); // Manually free the allocated memory
+    free(q->arr);
+    free(q);
     return 0;
 }
