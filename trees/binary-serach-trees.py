@@ -55,6 +55,10 @@ class BST:
     while root.left != None:
       root = root.left
     return root
+  def find_max_node(self, root):
+    while root.right != None:
+      root = root.right
+    return root
 
   def delete(self, root, target):
     print(f'del({root.val}, {target})')
@@ -81,9 +85,9 @@ class BST:
         root = root.left
       else:
       #case3 node have both the children
-        min_node = self.find_min_node(root.right)
-        root.val = min_node.val
-        root.right = self.delete(root.right, min_node.val)
+        max_node = self.find_max_node(root.left)
+        root.val = max_node.val
+        root.left = self.delete(root.left, max_node.val)
     return root
     
     
