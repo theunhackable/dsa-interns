@@ -4,6 +4,11 @@
 using namespace std;
 int main() {
     // Write C++ code here
+    int n = 5, e = 5;
+    int u[5] = {0, 1, 2, 4, 2};
+    int v[5] = {1, 2, 4, 3, 3};
+
+vectors in cpp;
     printf("Try programiz.pro");
     vector<int> a;
 
